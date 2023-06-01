@@ -1,0 +1,450 @@
+.checkoutMainContainer {
+  background-color: #fafafa;
+  padding-top: 100px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.checkoutMainBox {
+  width: 63%;
+  min-height: 90vh;
+}
+
+.checoutHeader {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+  font-weight: 600;
+}
+
+.checoutHeader > img {
+  width: 30px;
+  margin-right: 8px;
+  cursor: pointer;
+}
+
+.checoutHeader > img:hover {
+  border-radius: 100%;
+  background-color: #bb993370;
+}
+
+.checkoutBox {
+  display: flex;
+  justify-content: space-between;
+}
+
+.checkoutMainHeading {
+  font-size: 28px;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.checkoutForm {
+  position: relative;
+
+  width: 58%;
+  padding: 10px 0px;
+  margin-top: 5px;
+  background-color: white;
+  border-radius: 5px;
+  box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.2);
+}
+
+.checkoutFormStep1Fields {
+  overflow-y: scroll;
+
+  height: 500px;
+}
+
+.checkoutFormStep1Fields::-webkit-scrollbar {
+  display: none;
+}
+
+.checkoutFormStep1Fields {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.checkoutRegularFont {
+  font-size: 17px;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.checkoutHourBox,
+.NoOfProfessionalBox,
+.materialsNeededBox,
+.specialReqBox,
+.checkoutdebitFormContainter {
+  margin-bottom: 25px;
+  padding: 0 20px;
+}
+
+.checkoutFrequencyBox,
+.checkouttimingBox,
+.CheckoutCanellationBox,
+.checkoutpaymentmethodbox,
+.checkoutVouncherBox {
+  margin-bottom: 30px !important;
+  padding: 0 20px;
+}
+
+.checkoutRoundedBtn {
+  background-color: white;
+  border: 1px solid #6a737b;
+  border-radius: 100%;
+  color: black;
+  font-weight: 600;
+  padding: 10px 15px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.checkoutRoundedBtn:hover {
+  background-color: #bb99336b;
+  color: #bb9933;
+  border-color: 1px solid #bb9933;
+}
+
+.checkoutRoundedBtnSelected {
+  background-color: #bb99336b;
+  color: #bb9933;
+  border-color: 1px solid #bb9933;
+}
+
+.checkoutRegularBtn {
+  background-color: white;
+  border: 1px solid #6a737b;
+  border-radius: 20px;
+  color: black;
+  font-weight: 600;
+  padding: 10px 15px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 15px;
+}
+
+.checkoutRegularBtn:hover {
+  background-color: #bb99336b;
+  color: #bb9933;
+  border-color: 1px solid #bb9933;
+}
+
+.specialReqBox > textarea {
+  width: 100%;
+  height: 100px;
+  border-radius: 5px;
+  border: 1px solid #6a737b;
+  padding: 10px;
+  font-size: 15px;
+  font-weight: 600;
+  resize: none;
+  outline: none;
+}
+
+.specialReqBox > textarea:focus {
+  border-color: #bb9933;
+}
+
+.specialReqBox > textarea::placeholder {
+  color: rgba(0, 0, 0, 0.4);
+}
+
+.checkoutNextBtnBox {
+  padding: 15px 20px;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  box-shadow: 0px -1px 5px 0px rgba(0, 0, 0, 0.1);
+  background-color: white;
+}
+
+.checkoutNextBtn {
+  background-color: #bb9933;
+  cursor: pointer;
+  text-align: center;
+  color: white;
+  padding: 14px 20px;
+  font-weight: 600;
+  border-radius: 25px;
+  margin-top: 20px;
+}
+
+.checkoutDetails {
+  width: 38%;
+  margin-top: 5px;
+}
+
+.BookingDetailsBox {
+  padding: 10px 20px;
+  border-radius: 5px;
+  background-color: white;
+}
+
+.PaymentSummaryBox {
+  padding: 10px 20px;
+  border-radius: 5px;
+  background-color: white;
+  margin-top: 30px;
+}
+
+.checkoutDetailsCotentBox {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 15px;
+}
+
+.checkoutDetailsCotentBoxHeading {
+  /* background-color: yellow; */
+  width: 55%;
+  text-align: left;
+  color: rgba(0, 0, 0, 0.38);
+}
+
+.checkoutDetailsCotentBoxpara {
+  text-align: right;
+  color: rgba(0, 0, 0, 0.87);
+  /* background-color: red; */
+  width: 45%;
+}
+
+.show {
+  display: block;
+}
+
+.hidden {
+  display: none;
+}
+
+.checkoutFrequencyBox {
+  margin: 20px;
+  border: 1px solid #bb9933;
+  border-radius: 5px;
+  min-height: 110px;
+  background-color: #bb993370;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.checkoutFrequencyheader {
+  display: flex;
+  justify-content: space-between;
+}
+
+.checkoutFrequencyheader > p {
+  font-size: 18px;
+  font-weight: 600;
+  color: black;
+}
+
+.checkoutReapetsBox {
+  display: flex;
+  margin-top: 10px;
+  border-radius: 5px;
+  padding: 3px 5px;
+  background-color: #bb9933;
+  width: fit-content;
+}
+
+.checkoutReapetsBox > img {
+  margin-right: 8px;
+}
+
+.checkoutTimingHeader {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+
+.CheckoutHighlightBox {
+  background-color: rgba(0, 0, 0, 0.04);
+  margin: 20px;
+  padding: 20px 15px;
+  border-radius: 5px;
+}
+
+.CheckoutHighlightBoxContent {
+  display: flex;
+  align-items: center;
+}
+
+.CheckoutHighlightBoxContent > img {
+  margin-right: 10px;
+}
+.CheckoutHighlightBoxContent > p {
+  font-size: 15px;
+}
+
+.CheckoutCanellationDetailsBox {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 10px;
+}
+
+.checkoutTimingHeader > span,
+.checkoutFrequencyheader > span,
+.CheckoutCanellationDetailsBox > span,
+.checkoutpaymentmethodHeader > span {
+  font-size: 15px;
+  font-weight: 600;
+  color: #bb9933;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.checkoutpaymentmethodbox,
+.checkoutFormStep1Fields {
+  margin-top: 10px;
+}
+
+.checkoutpaymentmethodHeader {
+  display: flex;
+  justify-content: space-between;
+}
+
+.checkoutdebitCardBox {
+  border: 1px solid #bb9933;
+  border-radius: 5px;
+  background-color: #bb993370;
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 10px;
+}
+
+.checkoutcardHeading {
+  display: flex;
+  align-items: center;
+}
+
+.checkoutcardHeading > span {
+  font-weight: 600;
+}
+
+.checkoutcardHeading > img {
+  width: 20px;
+  margin-right: 10px;
+}
+
+.checkoutcardHeadingImages {
+  display: flex;
+  align-items: center;
+}
+
+.checkoutcardHeadingImages > img {
+  width: 22px;
+  margin-right: 10px;
+}
+
+.transactionIcon {
+  width: 22px;
+  margin-right: 10px;
+}
+
+.checkoutaddVouncerCodeBox {
+  padding: 10px;
+  border-radius: 5px;
+  box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.2);
+  background-color: white;
+  width: 180px;
+}
+
+.checkoutaddBox {
+  display: flex;
+  align-items: center;
+  margin-top: 15px;
+  cursor: pointer;
+}
+
+.checkoutaddBox > img {
+  width: 20px;
+  margin-right: 5px;
+}
+
+.checkoutdebitFormContainter {
+  display: flex;
+  flex-direction: column;
+}
+
+.checkoutdebitFormDateandCVV {
+  margin-top: 10px;
+  display: flex;
+  justify-content: space-between !important;
+}
+
+.checkoutdate > input,
+.checkoutCVV > input,
+.checkoutdebitFormContainter > input {
+  width: 100%;
+  border: none;
+  /* border-radius: 5px; */
+  font-size: 17px;
+  outline: none;
+  border-bottom: 1px solid #d3d2d2;
+  padding: 5px 10px;
+  outline: none;
+  margin: 10px;
+}
+
+.checkoutdate {
+  width: 48%;
+}
+
+.checkoutCVV {
+  width: 48%;
+}
+
+@media only screen and (max-width: 1400px) and (min-width: 769px) {
+  .checkoutMainBox {
+    width: 90%;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .checkoutdate,
+  .checkoutCVV {
+    width: 100%;
+  }
+
+  .checkoutdebitFormDateandCVV {
+    flex-direction: column;
+  }
+
+  .checkoutMainContainer {
+    padding-top: 50px;
+  }
+
+  .checkoutMainBox {
+    width: 90%;
+    margin-top: 50px;
+  }
+
+  .checkoutBox {
+    flex-direction: column;
+  }
+
+  .checkoutForm {
+    width: 100%;
+  }
+
+  .checkoutDetails {
+    display: none;
+  }
+
+  .checkoutRoundedBtn,
+  .checkoutRegularBtn {
+    padding: 5px 10px;
+    font-size: 14px;
+    margin-bottom: 5px;
+  }
+
+  .checkoutMainHeading {
+    font-size: 20px;
+  }
+}

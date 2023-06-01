@@ -1,0 +1,155 @@
+.upperServicesContainer {
+  margin-top: 115px;
+  padding-bottom: 20px;
+  display: flex;
+  align-items: start;
+  /* background-color: blueviolet; */
+}
+
+.upperServices-box {
+  text-align: center;
+  width: 100px !important;
+  cursor: pointer;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.upperServices-box > img {
+  width: 98%;
+  margin-bottom: 5px;
+  padding: 10px;
+}
+
+.upperServices-box > img:hover {
+  border: 1px solid #dbd8d8;
+  border-radius: 100%;
+}
+
+.upperServices-box > span {
+  color: rgba(0, 0, 0, 0.87);
+}
+
+@media screen and (max-width: 1000px) {
+  .upperServicesContainer {
+    width: 95%;
+  }
+}
+
+@media screen and (max-width: 1400) {
+}
+
+/* main services section */
+
+#seeMoreBox {
+  display: none;
+  margin-top: 10px;
+}
+
+.mainServiceGeneralSection {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.SpecificServiseHeading > h1 {
+  color: black;
+  font-size: 26px;
+  font-weight: bold;
+  width: 79vw;
+}
+
+.specificServiceBox {
+  position: relative;
+  width: 290px !important;
+  cursor: pointer;
+}
+
+.specificServiceBoxImageContainer {
+  background-color: #000000;
+  width: 100%;
+  height: 180px;
+  border-radius: 7px;
+  overflow: hidden !important;
+}
+
+.specificServiceBoxImage {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 7px;
+  opacity: 0.6;
+}
+
+.specificServiceBoxTitle {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  font-weight: bold;
+  color: white;
+  font-size: 22px;
+}
+
+.serviceBtnBox {
+  width: 76vw;
+}
+
+.serviceBtn {
+  background-color: #dd9933;
+  outline: none;
+  width: 100%;
+  padding: 15px 20px;
+  border-radius: 10px;
+  color: white;
+  font-size: 20px;
+  border: 1px solid #dd9933;
+  margin-top: 10px;
+  cursor: pointer;
+}
+
+.serviceBtn:hover {
+  background-color: #1c1c3b;
+  border: 1px solid #1c1c3b;
+}
+
+@media screen and (max-width: 1000px) {
+  .upperServicesContainer {
+    width: 95%;
+  }
+}
+
+@media screen and (max-width: 1450px) {
+  .specificServiceBoxImageContainer,
+  .specificServiceBoxImage {
+    width: 210px;
+    height: 160px;
+  }
+
+  .specificServiceBoxTitle {
+    font-size: 16px;
+  }
+}
+
+@media screen and (max-width: 850px) and (min-width: 400px) {
+  .specificServiceBoxImageContainer,
+  .specificServiceBoxImage {
+    width: 180px;
+    height: 150px;
+  }
+
+  .specificServiceBoxTitle {
+    font-size: 14px;
+  }
+
+  .SpecificServiseHeading > h1 {
+    font-size: 18px;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .specificServiceBoxImageContainer,
+  .specificServiceBoxImage {
+    width: 220px;
+    height: 150px;
+  }
+}

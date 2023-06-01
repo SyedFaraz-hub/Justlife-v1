@@ -1,0 +1,950 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" type="text/css" href="../../slick/slick.css" />
+    <link rel="stylesheet" type="text/css" href="../../slick/slick-theme.css" />
+    <link rel="stylesheet" href="../../global.css" />
+    <link rel="stylesheet" href="checkout.module.css" />
+    <link rel="stylesheet" href="https://cdn.tutorialjinni.com/intl-tel-input/17.0.8/css/intlTelInput.css" />
+    <script src="https://cdn.tutorialjinni.com/intl-tel-input/17.0.8/js/intlTelInput.min.js"></script>
+    <script src="../../app.js"></script>
+    <script src="./index.js"></script>
+    <title>JustLife | Checkout</title>
+</head>
+
+<body>
+    <!-- Header in global css -->
+    <section class="sectionMainBox headerMainBox">
+        <a href="../../HomeUae/index.html">
+            <div class="logoBox">
+                <img src="../../images/logo.svg" alt="logo" srcset="" />
+            </div>
+        </a>
+        <div class="headerContentBox">
+            <div class="languageBox">العربية</div>
+            <div class="countryBox-Container">
+                <div onclick="ShowCountry()" class="countryBox">
+                    <img src="../../images/sa.svg" alt="ae" srcset="" />
+                </div>
+
+                <div id="CountrySelectionBox" class="CountrySelectionBox" style="display: none">
+                    <p class="CountrySelectionHeading">Select Country</p>
+                    <a href="../../HomeUae/index.html">
+                        <div class="specificCountryBox">
+                            <img src="../../images/ae.svg" alt="ae" srcset="" />
+                            <span> United Arab Emirates</span>
+                        </div>
+                    </a>
+
+                    <a href="../../HomeSu/index.html">
+                        <div class="specificCountryBox">
+                            <img src="../../images/sa.svg" alt="ae" srcset="" />
+                            <span>Saudi Arabia</span>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div onclick="showLogin()" class="menuSelectionBox-container">
+                <div class="menuSelectionBox">
+                    <img src="../../images/profileIcon.png" alt="profile" srcset="" />
+                    <img src="../../images/menuIcon.png" alt="menu" srcset="" />
+                </div>
+
+                <div id="menuSelectionLogin-box" style="display: none;" class="menuSelectionLogin-box">
+                    <div class="navbar-sign-login-button" onclick="showLoginModal()">
+                        <a href="#">
+                            <!-- sign up rounded  -->
+                            Sign Up or Log in
+                        </a>
+                    </div>
+
+                    <div class="navbar-help-container">
+                        <img src="../../images/questionMarkIcon.svg" alt="loading" />
+                        <span>Help</span>
+                    </div>
+
+                    <div style="border:1px solid rgba(0,0,0,.12)"></div>
+
+
+                    <div class="navbar-app-play-store-button">
+                        <!-- download google play  -->
+                        <div>
+                            <img class="navbar-store-img" src="../../images/playstore.png" alt="loading">
+                        </div>
+
+                        <div>
+                            <img class="navbar-store-img" src="../../images/appstore.png" alt="loading">
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        </div>
+    </section>
+
+
+
+    <!--  checkout  -->
+    <div class="checkoutMainContainer">
+
+
+
+
+        <div id="Step1" class="checkoutMainBox show">
+
+            <div class="checoutHeader">
+                <img src="../../../images/leftArrowIcon.svg" alt="" srcset="">
+                <div>Step 1 of 3</div>
+            </div>
+
+
+            <div>
+                <h2 class="checkoutMainHeading">Service Details</h2>
+
+                <div class="checkoutBox">
+                    <div class="checkoutForm">
+
+                        <div class="checkoutFormStep1Fields">
+
+
+
+                            <div class="checkoutHourBox">
+                                <p class="checkoutRegularFont">How many hours do you need your professional to stay?</p>
+
+                                <!-- rounded buttons with hover  -->
+                                <button id="2hour" onclick="selectHour(`2hour`)"
+                                    class="checkoutRoundedBtn hourBtn seletedBtn">2</button>
+                                <button id="3hour" onclick="selectHour(`3hour`)"
+                                    class="checkoutRoundedBtn hourBtn">3</button>
+                                <button id="4hour" onclick="selectHour(`4hour`)"
+                                    class="checkoutRoundedBtn hourBtn">4</button>
+                                <button id="5hour" onclick="selectHour(`5hour`)"
+                                    class="checkoutRoundedBtn hourBtn">5</button>
+                                <button id="6hour" onclick="selectHour(`6hour`)"
+                                    class="checkoutRoundedBtn hourBtn">6</button>
+                                <button id="7hour" onclick="selectHour(`7hour`)"
+                                    class="checkoutRoundedBtn hourBtn">7</button>
+                                <button id="8hour" onclick="selectHour(`8hour`)"
+                                    class="checkoutRoundedBtn hourBtn">8</button>
+                            </div>
+
+
+                            <div class="NoOfProfessionalBox">
+                                <p class="checkoutRegularFont">How many professionals do you need?</p>
+
+                                <!-- rounded buttons with hover  -->
+                                <button id="1professional" onclick="selectProfessionals(`1professional`)"
+                                    class="checkoutRoundedBtn professionBtn seletedBtn">1</button>
+                                <button id="2professional" onclick="selectProfessionals(`2professional`)"
+                                    class="checkoutRoundedBtn professionBtn">2</button>
+                                <button id="3professional" onclick="selectProfessionals(`3professional`)"
+                                    class="checkoutRoundedBtn professionBtn">3</button>
+                                <button id="4professional" onclick="selectProfessionals(`4professional`)"
+                                    class="checkoutRoundedBtn professionBtn">4</button>
+
+                            </div>
+
+
+                            <div class="materialsNeededBox">
+                                <p class="checkoutRegularFont">Need cleaning materials?</p>
+
+                                <!-- rounded buttons with hover  -->
+                                <button id="No, i have them" onclick="selectCleaningMaterials(`No, i have them`)"
+                                    class="checkoutRegularBtn cleaningBtn seletedBtn">No, i have them</button>
+                                <button id="Yes, Please" onclick="selectCleaningMaterials(`Yes, Please`)"
+                                    class="checkoutRegularBtn cleaningBtn">Yes, Please</button>
+
+                            </div>
+
+                            <div class="specialReqBox">
+                                <p class="checkoutRegularFont">Do you have any special requests?</p>
+                                <textarea id="specialRequest" onchange="getSpecialRequest()"
+                                    placeholder="Example: Key under the mat, ironing, window cleaning, etc." name=""
+                                    id="" cols="40" rows="10"></textarea>
+                            </div>
+
+
+                            <br />
+                            <br />
+                            <br />
+                            <br />
+
+                        </div>
+
+
+
+
+
+
+
+                        <div class="checkoutNextBtnBox">
+                            <!-- button absolute on bottom -->
+                            <div class="checkoutNextBtn" onclick="showFrequencyModal()">Next</div>
+                        </div>
+
+                    </div>
+
+
+
+
+
+
+
+                    <div class="checkoutDetails">
+                        <div class="BookingDetailsBox">
+                            <p class="checkoutRegularFont">Booking Details</p>
+                            <div class="checkoutDetailsCotentBox">
+                                <span class="checkoutDetailsCotentBoxHeading">Address</span>
+                                <span class="checkoutDetailsCotentBoxpara">8188 Prince Faisal Ibn Fahd, 2582, Ash Shati
+                                    District, Jeddah 23612, Saudi Arabia</span>
+                            </div>
+                            <div class="checkoutDetailsCotentBox">
+                                <span class="checkoutDetailsCotentBoxHeading">Frequency</span>
+                                <span class="checkoutDetailsCotentBoxpara">Weekly</span>
+                            </div>
+                            <div class="checkoutDetailsCotentBox">
+                                <span class="checkoutDetailsCotentBoxHeading">Service</span>
+                                <span class="checkoutDetailsCotentBoxpara">Home Cleaning</span>
+                            </div>
+                            <div class="checkoutDetailsCotentBox">
+                                <span class="checkoutDetailsCotentBoxHeading">Duration</span>
+                                <span class="checkoutDetailsCotentBoxpara">2 hours</span>
+                            </div>
+                            <div class="checkoutDetailsCotentBox">
+                                <span class="checkoutDetailsCotentBoxHeading">Number of Professionals</span>
+                                <span class="checkoutDetailsCotentBoxpara">1</span>
+                            </div>
+                            <div class="checkoutDetailsCotentBox">
+                                <span class="checkoutDetailsCotentBoxHeading">Material</span>
+                                <span class="checkoutDetailsCotentBoxpara">No</span>
+                            </div>
+                        </div>
+
+
+
+                        <div class="PaymentSummaryBox">
+                            <p class="checkoutRegularFont">Payment Summary</p>
+                            <div class="checkoutDetailsCotentBox">
+                                <span class="checkoutDetailsCotentBoxHeading">Subtotal</span>
+                                <span class="checkoutDetailsCotentBoxpara">AED 78.00</span>
+                            </div>
+                            <div class="checkoutDetailsCotentBox">
+                                <span class="checkoutDetailsCotentBoxHeading">AED 78.00</span>
+                                <span class="checkoutDetailsCotentBoxpara">-AED 7.80</span>
+                            </div>
+                            <div class="checkoutDetailsCotentBox">
+                                <span class="checkoutDetailsCotentBoxHeading">Total</span>
+                                <span class="checkoutDetailsCotentBoxpara">AED 70.20</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+
+            </div>
+        </div>
+
+
+
+        <div id="Step2" class="checkoutMainBox hidden">
+
+            <div class="checoutHeader">
+                <img onclick="changeCheckoutScreen(1)" src="../../../images/leftArrowIcon.svg" alt="" srcset="">
+                <div>Step 2 of 3</div>
+            </div>
+
+
+            <div>
+                <h2 class="checkoutMainHeading">Date & Time</h2>
+
+                <div class="checkoutBox">
+                    <div class="checkoutForm">
+
+                        <div class="checkoutFormStep1Fields">
+
+
+                            <div class="checkoutFrequencyBox">
+                                <div class="checkoutFrequencyheader">
+                                    <p>
+                                        Frequency
+                                    </p>
+                                    <span onclick="showFrequencyModal()">Change</span>
+                                </div>
+
+                                <div class="checkoutReapetsBox">
+                                    <img src="../../../images/repeatIcon.svg" alt="loading">
+                                    <p id="frequencyCheckoutHeading">   Weekly</p>
+                                </div>
+                            </div>
+
+
+
+                            <div class="NoOfProfessionalBox">
+                                <p class="checkoutRegularFont">When would you like your service?</p>
+
+                                <!-- rounded buttons with hover  -->
+                                <!-- <section class="variable slider" >  -->
+                                <div id="checkoutServiceDaysBox" class="checkoutServiceDaysBoxClass">
+
+ 
+                                
+                                </div>
+
+                                <!-- <button class="checkoutRoundedBtn">2</button>
+                                <button class="checkoutRoundedBtn">3</button>
+                                <button class="checkoutRoundedBtn">4</button>  -->
+
+                            </div>
+
+
+                            <div class="checkouttimingBox">
+                                <div class="checkoutTimingHeader">
+
+                                    <p class="checkoutRegularFont">What time would you like us to start?</p>
+                                    <span onclick="showServiceModal()">See all</span>
+
+
+                                </div>
+
+                                <!-- rounded buttons with hover  -->
+                                <button id="08_10" onclick="selectServiceTime(`08_10`)" class="checkoutRegularBtn serviceTimebtn seletedBtn">08:00-10:00</button>
+                                <button id="16_18" onclick="selectServiceTime(`16_18`)" class="checkoutRegularBtn serviceTimebtn">16:00-18:00</button>
+
+                            </div>
+
+
+                            <div class="CheckoutHighlightBox">
+                                <div class="CheckoutHighlightBoxContent">
+
+
+                                    <img src="../../../images/attentionIcon.svg" alt="loading">
+
+                                    <p>Free cancellation until 12 hours before the start of your booking.</p>
+                                </div>
+
+                                <div class="CheckoutCanellationDetailsBox">
+                                    <span onclick="showPolicyModal()">Details</span>
+                                </div>
+                            </div>
+
+                            <br />
+                            <br />
+                            <br />
+                            <br />
+
+                        </div>
+
+
+
+                        <div class="checkoutNextBtnBox">
+                            <!-- button absolute on bottom -->
+                            <div onclick="changeCheckoutScreen(3)" class="checkoutNextBtn">Next</div>
+                        </div>
+
+                    </div>
+
+
+
+
+
+
+
+                    <div class="checkoutDetails">
+                        <div class="BookingDetailsBox">
+                            <p class="checkoutRegularFont">Booking Details</p>
+                            <div class="checkoutDetailsCotentBox">
+                                <span class="checkoutDetailsCotentBoxHeading">Address</span>
+                                <span class="checkoutDetailsCotentBoxpara">8188 Prince Faisal Ibn Fahd, 2582, Ash Shati
+                                    District, Jeddah 23612, Saudi Arabia</span>
+                            </div>
+                            <div class="checkoutDetailsCotentBox">
+                                <span class="checkoutDetailsCotentBoxHeading">Frequency</span>
+                                <span class="checkoutDetailsCotentBoxpara">Weekly</span>
+                            </div>
+                            <div class="checkoutDetailsCotentBox">
+                                <span class="checkoutDetailsCotentBoxHeading">Service</span>
+                                <span class="checkoutDetailsCotentBoxpara">Home Cleaning</span>
+                            </div>
+                            <div class="checkoutDetailsCotentBox">
+                                <span class="checkoutDetailsCotentBoxHeading">Duration</span>
+                                <span class="checkoutDetailsCotentBoxpara">2 hours</span>
+                            </div>
+                            <div class="checkoutDetailsCotentBox">
+                                <span class="checkoutDetailsCotentBoxHeading">Number of Professionals</span>
+                                <span class="checkoutDetailsCotentBoxpara">1</span>
+                            </div>
+                            <div class="checkoutDetailsCotentBox">
+                                <span class="checkoutDetailsCotentBoxHeading">Material</span>
+                                <span class="checkoutDetailsCotentBoxpara">No</span>
+                            </div>
+                        </div>
+
+
+
+                        <div class="PaymentSummaryBox">
+                            <p class="checkoutRegularFont">Payment Summary</p>
+                            <div class="checkoutDetailsCotentBox">
+                                <span class="checkoutDetailsCotentBoxHeading">Subtotal</span>
+                                <span class="checkoutDetailsCotentBoxpara">AED 78.00</span>
+                            </div>
+                            <div class="checkoutDetailsCotentBox">
+                                <span class="checkoutDetailsCotentBoxHeading">AED 78.00</span>
+                                <span class="checkoutDetailsCotentBoxpara">-AED 7.80</span>
+                            </div>
+                            <div class="checkoutDetailsCotentBox">
+                                <span class="checkoutDetailsCotentBoxHeading">Total</span>
+                                <span class="checkoutDetailsCotentBoxpara">AED 70.20</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+
+            </div>
+        </div>
+
+
+
+        <div id="Step3" class="checkoutMainBox hidden">
+
+            <div class="checoutHeader">
+                <img onclick="changeCheckoutScreen(2)" src="../../../images/leftArrowIcon.svg" alt="" srcset="">
+                <div>Step 3 of 3</div>
+            </div>
+
+
+            <div>
+                <h2 class="checkoutMainHeading">Checkout</h2>
+
+                <div class="checkoutBox">
+                    <div class="checkoutForm">
+
+                        <div class="checkoutFormStep1Fields">
+                            <div class="checkoutpaymentmethodbox">
+                                <div class="checkoutpaymentmethodHeader">
+                                    <p class="checkoutRegularFont">Payment Method</p>
+                                    <span>Change</span>
+                                </div>
+
+                                <div class="checkoutdebitCardBox">
+                                    <div class="checkoutcardHeading">
+                                        <img src="../../../images/credicCardIcon.svg" alt="loading">
+                                        <span>Credic / Debit Card</span>
+                                    </div>
+
+                                    <div class="checkoutcardHeadingImages">
+                                        <img src="../../../images/masterIcon.svg" alt="loading">
+                                        <img src="../../../images/visaIcon.svg" alt="loading">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="checkoutdebitFormContainter">
+                                <input placeholder="Card Number" type="text">
+                                <div class="checkoutdebitFormDateandCVV">
+                                    <div class="checkoutdate">
+                                        <input placeholder="Exp. Date (MM/YY)" type="text">
+                                    </div>
+                                    <div class="checkoutCVV">
+
+                                        <input placeholder="CVV Number" type="text">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="CheckoutHighlightBox">
+                                <div class="CheckoutHighlightBoxContent">
+
+
+                                    <img class="transactionIcon" src="../../../images/transactionIcon.svg"
+                                        alt="loading">
+
+                                    <p>The session amount will be reserved on your card. You will only be charged once
+                                        the sesson is completed</p>
+                                </div>
+
+                            </div>
+
+                            <div class="CheckoutHighlightBox">
+                                <div class="CheckoutHighlightBoxContent">
+
+                                    <img src="../../../images/attentionIcon.svg" alt="loading">
+
+                                    <p>The session amount will be reserved on your card. You will only be charged once
+                                        the sesson is completed</p>
+                                </div>
+
+                            </div>
+
+
+
+                            <div class="checkoutVouncherBox">
+                                <p class="checkoutRegularFont">Add a vouncher Code or Justlife credict</p>
+
+                                <div class="checkoutaddVouncerCodeBox">
+                                    <p>Vouncher Code</p>
+                                    <div class="checkoutaddBox">
+                                        <img src="../../../images/addPlusIcon.svg" alt="">
+                                        <span>Add</span>
+                                    </div>
+
+                                </div>
+                            </div>
+
+
+
+
+
+
+
+                            <br />
+                            <br />
+                            <br />
+                            <br />
+
+                        </div>
+
+
+
+                        <div class="checkoutNextBtnBox">
+                            <!-- button absolute on bottom -->
+                            <div class="checkoutNextBtn">Complete</div>
+                        </div>
+
+
+
+
+                    </div>
+
+
+
+
+
+
+
+                    <div class="checkoutDetails">
+                        <div class="BookingDetailsBox">
+                            <p class="checkoutRegularFont">Booking Details</p>
+                            <div class="checkoutDetailsCotentBox">
+                                <span class="checkoutDetailsCotentBoxHeading">Address</span>
+                                <span class="checkoutDetailsCotentBoxpara">8188 Prince Faisal Ibn Fahd, 2582, Ash Shati
+                                    District, Jeddah 23612, Saudi Arabia</span>
+                            </div>
+                            <div class="checkoutDetailsCotentBox">
+                                <span class="checkoutDetailsCotentBoxHeading">Frequency</span>
+                                <span class="checkoutDetailsCotentBoxpara">Weekly</span>
+                            </div>
+                            <div class="checkoutDetailsCotentBox">
+                                <span class="checkoutDetailsCotentBoxHeading">Service</span>
+                                <span class="checkoutDetailsCotentBoxpara">Home Cleaning</span>
+                            </div>
+                            <div class="checkoutDetailsCotentBox">
+                                <span class="checkoutDetailsCotentBoxHeading">Duration</span>
+                                <span class="checkoutDetailsCotentBoxpara">2 hours</span>
+                            </div>
+                            <div class="checkoutDetailsCotentBox">
+                                <span class="checkoutDetailsCotentBoxHeading">Number of Professionals</span>
+                                <span class="checkoutDetailsCotentBoxpara">1</span>
+                            </div>
+                            <div class="checkoutDetailsCotentBox">
+                                <span class="checkoutDetailsCotentBoxHeading">Material</span>
+                                <span class="checkoutDetailsCotentBoxpara">No</span>
+                            </div>
+                        </div>
+
+
+
+                        <div class="PaymentSummaryBox">
+                            <p class="checkoutRegularFont">Payment Summary</p>
+                            <div class="checkoutDetailsCotentBox">
+                                <span class="checkoutDetailsCotentBoxHeading">Subtotal</span>
+                                <span class="checkoutDetailsCotentBoxpara">AED 78.00</span>
+                            </div>
+                            <div class="checkoutDetailsCotentBox">
+                                <span class="checkoutDetailsCotentBoxHeading">AED 78.00</span>
+                                <span class="checkoutDetailsCotentBoxpara">-AED 7.80</span>
+                            </div>
+                            <div class="checkoutDetailsCotentBox">
+                                <span class="checkoutDetailsCotentBoxHeading">Total</span>
+                                <span class="checkoutDetailsCotentBoxpara">AED 70.20</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+
+            </div>
+        </div>
+
+
+
+
+
+    </div>
+
+
+
+
+
+
+
+    <!-- footer section -->
+    <section class="footerSectionMainBox">
+        <div class="sectionMainBox footerMainBox">
+            <h4>Services</h4>
+            <div class="footerServicesMainBox">
+                <a href="#">Maid Service</a>
+                <a href="#">Cleaning Services</a>
+                <a href="#">Carpet Cleaning</a>
+                <a href="#">Mattress Cleaning</a>
+                <a href="#">Sofa Cleaning</a>
+                <a href="#">Curtain Cleaning</a>
+                <a href="#">Cleaning Companies</a>
+                <a href="#">Deep Cleaning</a>
+                <a href="#">Move in and Out CLeaning Services </a>
+                <a href="#">House Cleaning </a>
+                <a href="#">Disinfection Service </a>
+                <a href="#">Covid-19 PCR Test at Home</a>
+                <a href="#">Women's salon</a>
+                <a href="#">Women's Spa</a>
+                <a href="#">Furniture Cleaning</a>
+                <a href="#">Men's Salon</a>
+                <a href="#">Lab's Test at Home</a>
+                <a href="#">Pest's Control</a>
+                <a href="#">Men's Spa</a>
+                <a href="#">Men's Grooming</a>
+                <a href="#">Hair Care</a>
+                <a href="#">Pet Grooming</a>
+                <a href="#">IV Therapy</a>
+                <a href="#">Babysitting At Home</a>
+                <a href="#">Car Wash At Home</a>
+                <a href="#">Plumber Services</a>
+                <a href="#">Handyman Services</a>
+                <a href="#">Electrician Services</a>
+                <a href="#">Home Painting</a>
+                <a href="#">Nail Couture Service</a>
+                <a href="#">Pickers and Movers</a>
+                <a href="#">Physiotherapy at Home</a>
+                <a href="#">Body Adjustment</a>
+            </div>
+            <div class="footerCitiesMainBox">
+                <div class="citiesMainBox">
+                    <h4>United Arab Emirates</h4>
+                    <div class="citiesServicesBox">
+                        <a href="#">Dubai</a>
+                        <a href="#">Abu Dhabi</a>
+                        <a href="#">Sharjah</a>
+                        <a href="#">Ajman</a>
+                    </div>
+                </div>
+                <div class="citiesMainBox">
+                    <h4>Saudi Arabia</h4>
+                    <div class="citiesServicesBox">
+                        <a href="#">Jeddah</a>
+                        <a href="#">Riyadh</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footerBottomBox sectionMainBox">
+            <div class="footerBottomAppBox">
+                <div class="footerBottomAppIconBox">
+                    <img src="../images/appstore.png" alt="ae" srcset="" />
+                </div>
+                <div class="footerBottomAppIconBox">
+                    <img src="../images/playstore.png" alt="ae" srcset="" />
+                </div>
+            </div>
+            <div class="footerBootomSocialBox">
+                <a href="#">
+                    <img src="../images/facebookIcon.png" alt="ae" srcset="" />
+                </a>
+                <a href="#">
+                    <img src="../images/twitterIcon.png" alt="ae" srcset="" />
+                </a>
+                <a href="#">
+                    <img src="../images/instaIcon.png" alt="ae" srcset="" />
+                </a>
+            </div>
+            <div class="footerBottomLinkBox">
+                <a href="#">
+                    <span>F.A.Q</span>
+                </a>
+                <a href="#">
+                    <span>Privacy</span>
+                </a>
+                <a href="#">
+                    <span>Sitemap</span>
+                </a>
+                <a href="#">
+                    <span>Career</span>
+                </a>
+                <a href="#">
+                    <span>Blog</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+
+
+    <!-- login modal -->
+    <div id="loginModal" class="login-modal">
+        <!-- Modal content -->
+        <div class="login-modal-content">
+            <div class="login-modal-container">
+                <div class="login-modal-header">
+                    <p>Log in or sign up</p>
+                    <span class="login-close" onclick="hideLoginModal()">&times;</span>
+                </div>
+                <div class="login-modal-body">
+                    <p>Your mobile number</p>
+                    <input name="phone" type="text" id="phone"
+                        oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');" />
+                    <div class="navbar-sign-login-button">
+                        <a href="#">
+                            <!-- sign up rounded  -->
+                            Continue
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- chat modal -->
+    <div id="chatModal" class="chat-modal">
+        <!-- Modal content -->
+        <div class="chat-modal-content">
+            <div class="chat-modal-container">
+                <div class="chat-modal-header">
+                    <p>Chat With Us</p>
+                    <span class="login-close" onclick="hideChatModal()">&times;</span>
+                </div>
+                <div class="chat-modal-body">
+                    <p>Mobile number</p>
+                    <input name="phone" type="text" id="chatPhone"
+                        oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');" />
+                    <div style="border-bottom: 1px solid #9b9b9b"></div>
+
+                    <div class="form__group field">
+                        <input type="email" class="form__field" placeholder="Email" required="true">
+                        <label for="name" class="form__label">Email</label>
+                    </div>
+                    <div class="form__group field">
+                        <input type="email" class="form__field" placeholder="Your full name" required="true">
+                        <label for="name" class="form__label">Your full name</label>
+                    </div>
+                    <div class="form__group field">
+                        <input type="email" class="form__field" placeholder="Please select issue" required="true"
+                            value="">
+                        <label for="name" class="form__label">Please select issue</label>
+                    </div>
+                    <div class="navbar-sign-login-button">
+                        <a href="#">
+                            <!-- sign up rounded  -->
+                            Start Chat
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div id="frequencyModal" class="login-modal">
+        <!-- Modal content -->
+        <div class="frequency-modal-content">
+            <div class="frequency-modal-container">
+                <div class="frequency-modal-header">
+                    <p>Choose your frequency</p>
+                    <span class="login-close" onclick="hideFrequencyModal()">&times;</span>
+                </div>
+                <div class="frequency-modal-body">
+                    <div id="1frequency" onclick="selectFrequency(`1frequency`)" class="checkoutfrequency offer-box offer-box-selected">
+                        <div class="offerBox1">
+                            <div class="offerBox1-Box1">
+                                <p>Weekly</p>
+                                <div class="popular-box">Most Popular</div>
+                            </div>
+                            <div class="offerBox1-Box2">
+                                <div
+                                    style="display: flex; justify-content: space-between; gap: 14px; align-items: center;">
+                                    <p>10% OFF</p>
+                                    <!-- <input type="radio"> -->
+                                </div>
+                            </div>
+                        </div>
+
+
+
+                        <div class="offerBox2">
+                            <ul>
+                                <li>The same professional will join you every week.</li>
+                                <li>Pause/cancel your subscription at your convenience.</li>
+                            </ul>
+                        </div>
+
+                    </div>
+                    <div id="2frequency" onclick="selectFrequency(`2frequency`)" class="checkoutfrequency offer-box">
+                        <div class="offerBox1">
+                            <div class="offerBox1-Box1">
+                                <p>Every 2 Weeks</p>
+                            </div>
+                            <div class="offerBox1-Box2">
+                                <div
+                                    style="display: flex; justify-content: space-between; gap: 14px; align-items: center;">
+                                    <p>5% OFF</p>
+                                    <!-- <input type="radio"> -->
+                                </div>
+                            </div>
+                        </div>
+                        <div class="offerBox2">
+                            <ul>
+                                <li>The same professional will join you every 2 weeks.</li>
+                                <li>Pause/cancel your subscription at your convenience.</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div id="3frequency" onclick="selectFrequency(`3frequency`)" class="checkoutfrequency offer-box">
+                        <div class="offerBox1">
+                            <div class="offerBox1-Box1">
+                                <p>One Time</p>
+                            </div>
+                            <div class="offerBox1-Box2">
+                                <div
+                                    style="display: flex; justify-content: space-between; gap: 14px; align-items: center;">
+                                    <!-- <input type="radio"> -->
+                                </div>
+                            </div>
+                        </div>
+                        <div class="offerBox2">
+                            <ul>
+                                <li>If you are unsure of your calendar...</li>
+                            </ul>
+                        </div>
+                    </div>
+
+
+
+
+                    <div id="frequencyButton" class="navbar-sign-login-button" onclick="changeCheckoutScreen(2)">
+                        <a href="#">
+                            <!-- sign up rounded  -->
+                            Select
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="serviceModal" class="login-modal">
+        <!-- Modal content -->
+        <div class="service-modal-content">
+            <div class="service-modal-container">
+                <div class="service-modal-header">
+                    <p>Service Start Time</p>
+                    <span class="login-close" onclick="hideServiceModal()">&times;</span>
+                </div>
+                <div class="service-modal-body">
+                    <div class="service-time-box">
+                        <button  id="10_08" onclick="selectServiceTime(`10_08`)" class="checkoutRegularBtn serviceTimebtn">10:00-08:00</button>
+                    
+            
+                    </div>
+                    <div class="service-detail-box">
+                        <ul>
+                            <li>Service will take approximately 2 hrs</li>
+                            <li>Service starts between 11:00-11:30</li>
+                            <li>Service finishes between 13:00-13:30</li>
+                        </ul>
+                    </div>
+                    <div id="serviceModalButton" class="navbar-sign-login-button" onclick="hideServiceModal()">
+                        <a href="#">
+                            <!-- sign up rounded  -->
+                            Select
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="policyModal" class="login-modal">
+        <!-- Modal content -->
+        <div class="policy-modal-content">
+            <div class="policy-modal-container">
+                <div class="policy-modal-header">
+                    <p>Cancellation and reschedule policy</p>
+                    <span class="login-close" onclick="hidePolicyModal()">&times;</span>
+                </div>
+                <div class="policy-modal-body">
+                    <div class="policy-detail-box">
+                        <table>
+                            <tr class="table-heading">
+                                <th>Type</th>
+                                <th>Cancellation Fee</th>
+                                <th>Reschedule Fee</th>
+                            </tr>
+                            <tr class="table-content">
+                                <td>10 minutes after placing the request</td>
+                                <td>Free of charge</td>
+                                <td>Free of charge</td>
+                            </tr>
+                            <tr class="table-content">
+                                <td>12+ hours before the appointment</td>
+                                <td>Free of charge</td>
+                                <td>Free of charge</td>
+                            </tr>
+                            <tr class="table-content">
+                                <td>12-24 hours before the appointment</td>
+                                <td>25% of appointment value</td>
+                                <td>Free of charge</td>
+                            </tr>
+                            <tr class="table-content">
+                                <td>Less than 2 hours before the appointment</td>
+                                <td>50% of appointment value</td>
+                                <td>25% of appointment value</td>
+                            </tr>
+                            <tr class="table-content">
+                                <td>Missed appointment</td>
+                                <td>100% of appointment value</td>
+                                <td>100% of appointment value</td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- chat icon -->
+    <div class="chat-icon-box" onclick="showChatModal()">
+        <img src="../../images/chatIcon.png" alt="logo" srcset="" />
+    </div>
+
+    <!-- Slick Slider Js  Config-->
+    <script src="https://code.jquery.com/jquery-2.2.0.min.js" type="text/javascript"></script>
+    <script src="../../slick/slick.js" type="text/javascript" charset="utf-8"></script>
+    <script type="text/javascript">
+    $(document).on("ready", function () {
+      $(".variable").slick({
+        infinite: false,
+        variableWidth: true,
+
+      });
+    });
+    </script>
+</body>
+
+</html>
